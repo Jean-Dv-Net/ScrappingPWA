@@ -1,0 +1,13 @@
+# Ignorar el archivo .env
+.env
+logging.log
+
+# Ignorar el directorio webscrapping del entorno virtual
+webscrapping/
+
+# Ignorar __pycache__
+__pycache__
+
+# Ignorar todo el contenido de la carpeta uploads, pero no la carpeta misma
+uploads/*
+env

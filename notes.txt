@@ -1,0 +1,14 @@
+Tabla -> por cada página a scrapping
+
+En cada página definimos que campos vamos a almacenar en la tabla
+
+Los datos que ya existan no se vuelvan a guardar
+Los datos que no existan se guardan (nuevos)
+
+La investigación solo se permite por una pagina, no varias 
+Se pueden ejecutar varias investigaciones de manera simultanea pero de páginas diferentes
+
+Arreglar el modelado de datos, usar librerias modelados de datos
+
+Generar 2 informes
+Cada página tiene su propio informe
