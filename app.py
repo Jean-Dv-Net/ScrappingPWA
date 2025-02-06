@@ -10,25 +10,25 @@ from src.scrappers.rues import Rues
 from src.scrappers.positiva_2 import Positiva2
 from src.scrappers.salud_total import SaludTotal
 if __name__ == "__main__":
-    scraper = Rues()
+    scraper = UNE()
     debtors = [
         {
             "id": 391,
             "rpa_batch_scraping_id": 49,
-            "identification": "1027281247",
+            "identification": "80028030",
             "date_expedition": "08/02/2023",
             "type_identification": "CC",
             "rpa_batch_detail_scraping_id": 391,
             "url": "https://pwa.referencias.nuevaeps.com.co",
             "name": "NUEVA EPS",
-            "username": "cobranza11@grupojuridico.co",
-            "password": "Deudu2025*",
+            "username": "pymes3",
+            "password": "Pymes1829",
             "variables": "celular, ciudad"
         },
         {
             "id": 402,
             "rpa_batch_scraping_id": 49,
-            "identification": "80028030",
+            "identification": "1027281247",
             "date_expedition": "03/12/1999",
             "type_identification": "CC",
             "rpa_batch_detail_scraping_id": 402,
@@ -102,19 +102,6 @@ if __name__ == "__main__":
             "username": "pymes3",
             "password": "Pymes1829",
             "variables": "correo_electronico"
-        },
-        {
-            "id": 402,
-            "rpa_batch_scraping_id": 49,
-            "identification": "1027281247",
-            "date_expedition": "03/12/1999",
-            "type_identification": "CC",
-            "rpa_batch_detail_scraping_id": 402,
-            "url": "https://pwa.referencias.nuevaeps.com.co",
-            "name": "NUEVA EPS",
-            "username": "pymes3",
-            "password": "Pymes1829",
-            "variables": "correo_electronico"
-        },
+        }
     ]
-    asyncio.run(scraper.run("https://www.rues.org.co/?old=true", debtors=debtors))
+    asyncio.run(scraper.run("https://une.infokairos.com.co/user/login", debtors=debtors))

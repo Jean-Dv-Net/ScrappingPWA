@@ -28,6 +28,14 @@ class UNE(Scrapper):
                 await self.page.fill("input[name='identity']", debtor["username"])
                 await self.page.fill("input[name='credential']", debtor["password"])
                 await self.page.click("button[name='submit']")
+                await self.page.wait_for_load_state(state="domcontentloaded")
+                if (await self.page.locator("#content > div > div > div > form > ul > li").is_visible()):
+                    self.data[self.i] = {
+                        "message": "Credenciales para ingresar invalidas, intente cambiando la configuración de la página...",
+                        "status": "fail",
+                        "data": []
+                    }
+                    return False
 
             await self.page.fill("input[name='cedulanit']", debtor["identification"])
             await self.page.click("#submitbutton")
